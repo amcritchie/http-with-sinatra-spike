@@ -1,0 +1,8 @@
+<h1>HI</h1>
+<h1>Hello welcome to my app</h1>
+
+<ul>
+  <% items.each_with_index do |item, index| %>
+  <li><a href="/items/<%= index%>"><%= item %></a></li>
+      <% end %>
+</ul>
