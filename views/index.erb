@@ -1,8 +1,15 @@
-<h1>HI</h1>
 <h1>Hello welcome to my app</h1>
+<h1>*ruff*</h1>
+<img src="https://media.licdn.com/mpr/mpr/p/4/005/05b/0ad/17ef3d8.jpg" width="300">
 
-<ul>
+<form action="/search" method="post">
+  Search items: <input type="text" name="search">
+  <input type="submit" value="submit">
+</form>
   <% items.each_with_index do |item, index| %>
-  <li><a href="/items/<%= index%>"><%= item %></a></li>
-      <% end %>
-</ul>
+    <%= @search_items%>
+
+    <li><a href="/items/<%=  index + 1%>"><%= p item %></a></li>
+    <% end %>
+<br>
+<a href="/items/new">Add item.</a>
